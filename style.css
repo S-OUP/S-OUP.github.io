@@ -1,0 +1,149 @@
+        *{
+			font-family: Roboto Slab;
+			box-sizing: border-box;
+		}
+		body{
+			margin: 0;
+			background-color: rgb(200, 240, 190);
+		}
+		.bar{
+			background-color: rgb(160, 195, 35 );
+			padding: 20px 30px;
+			transition: 0.3s;
+            display: inline-block;
+		}
+		.bar:hover{
+			background-color: rgb(200, 120, 75 );
+			padding: 20px 30px;
+			transition: 0.3s;
+            display: inline-block;
+            border-radius: 10px;
+		}
+		.nav{
+			position: sticky;
+			top: 0;
+            background-color: rgb(160, 195, 35 );
+            padding: 0px 20px;
+            width: 100%;
+            border-bottom: 1px solid black;
+            justify-content: space-evenly;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+		.nav a{
+			font-size: 18px;
+			text-decoration: none;
+			color:darkslategray;
+		}
+		.dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 166px;
+            background-color: rgb(160, 195, 35 );
+            z-index: 1000;
+        }
+
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            border-top: 1px solid black;
+        }
+
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 15px;
+            font-size: 15px;
+            border-bottom: 1px solid black;
+        }
+
+
+        .dropdown-content a:hover {
+            background-color:rgb(200, 120, 75 );
+            
+        }
+		.stories-content{
+	    	margin-bottom: 120px;
+	    }
+	    .story-card{
+	    	margin-bottom: 120px;
+	    }
+	    .story-comparison{
+	    	margin-bottom: 120px;
+	    }
+	    .story-form{
+	    	margin-bottom: 120px;
+	    }
+	    .story-links{
+	    	margin-bottom: 120px;
+	    }
+	    .story-guide a{
+	    	text-decoration: none;
+	    	color:black;
+	    }
+	    .story-guide a:hover{
+	    	color:rgb(240, 150, 54);
+	    }
+
+		#tourist-trapped1{
+			width:550px;
+			height:500px;
+		}
+		#tourist-trapped2{
+			width:550px;
+			height:500px;
+		}
+		#tourist-trapped3{
+			width:550px;
+			height:500px;
+		}
+		#NorthwestMansionMystery1{
+			width:600px;
+			height:500px;
+		}
+		#NorthwestMansionMystery2{
+			width:500px;
+			height:500px;
+		}
+		#NorthwestMansionMystery3{
+			width:570px;
+			height:500px;
+		}
+		#NotWhatHeSeems1{
+			width:480px;
+			height:500px;
+		}
+		#NotWhatHeSeems2{
+			width:620px;
+			height:500px;
+		}
+		#NotWhatHeSeems3{
+			width:570px;
+			height:500px;
+		}
+		#ATaleofTwoStans1{
+			width:560px;
+			height:500px;
+		}
+		#ATaleofTwoStans2{
+			width:560px;
+			height:500px;
+		}
+		#ATaleofTwoStans3{
+			width:560px;
+			height:500px;
+		}
+		footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #263b2b;
+            color: white;
+            font-size: 14px;
+       }

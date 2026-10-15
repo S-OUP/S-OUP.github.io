@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+		*{
+            font-family: Roboto Slab;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            background-color: rgb(200, 240, 190);
+        }
+        .bar{
+            background-color: rgb(160, 195, 35 );
+            padding: 20px 30px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+        .bar:hover{
+            background-color: rgb(200, 120, 75 );
+            padding: 20px 30px;
+            transition: 0.3s;
+            display: inline-block;
+            border-radius: 10px;
+        }
+        .nav{
+            position: sticky;
+            top: 0;
+            background-color: rgb(160, 195, 35 );
+            padding: 0px 20px;
+            width: 100%;
+            border-bottom: 1px solid black;
+            justify-content: space-evenly;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+        .nav a{
+            font-size: 18px;
+            text-decoration: none;
+            color:darkslategray;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 166px;
+            background-color: rgb(160, 195, 35 );
+            z-index: 1000;
+        }
+
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            border-top: 1px solid black;
+        }
+
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 15px;
+            font-size: 15px;
+            border-bottom: 1px solid black;
+        }
+
+
+        .dropdown-content a:hover {
+            background-color:rgb(200, 120, 75 );
+            
+        }
+	    
+	    .characters-content{
+	    	padding-bottom: 0px;
+	    }
+        .character-card{
+            margin-bottom: 120px;
+        }
+	    .character-guide a{
+	    	text-decoration: none;
+	    	color:black;
+	    }
+	    .character-guide a:hover{
+	    	color:rgb(240, 150, 54);
+	    }
+
+	    #DipperPines1{
+	    	width:600px;
+	    	height:400px;
+	    }
+	    #DipperPines2{
+	    	width:450px;
+            height:400px;
+	    }
+	    #DipperPines3{
+	    	width:550px;
+            height:400px;
+	    }
+	    #MabelPines1{
+	    	width:500px;
+            height:450px;
+	    }
+	    #MabelPines2{
+	    	width:600px;
+            height:400px;
+	    }
+	    #MabelPines3{
+	    	width:400px;
+            height:450px;
+	    }
+	    #Stanley“GrunkleStan”Pines1{
+	    	width:600px;
+            height:450px;
+	    }
+	    #Stanley“GrunkleStan”Pines2{
+	    	width:500px;
+            height:450px;
+	    }
+	    #Stanley“GrunkleStan”Pines3{
+	    	width:450px;
+            height:450px;
+	    }
+	    #Stanford“Ford”Pines1{
+	    	width:600px;
+            height:450px;
+	    }
+	    #Stanford“Ford”Pines2{
+	    	width:500px;
+            height:450px;
+	    }
+	    #Stanford“Ford”Pines3{
+	    	width:450px;
+            height:450px;
+        }
+        #Stanford“Ford”Pines1{
+	    	width:600px;
+            height:450px;
+	    }
+	    #Stanford“Ford”Pines2{
+	    	width:500px;
+            height:450px;
+	    }
+	    #Stanford“Ford”Pines3{
+	    	width:500px;
+            height:450px;
+        }
+        #SoosRamirez1{
+	    	width:600px;
+            height:450px;
+	    }
+	    #SoosRamirez2{
+	    	width:400px;
+            height:450px;
+	    }
+	    #SoosRamirez3{
+	    	width:600px;
+            height:450px;
+        }
+        #WendyCorduroy1{
+	    	width:600px;
+            height:450px;
+	    }
+	    #WendyCorduroy2{
+	    	width:370px;
+            height:450px;
+	    }
+	    #WendyCorduroy3{
+	    	width:650px;
+            height:450px;
+        }
+        #BillCipher1{
+	    	width:580px;
+            height:450px;
+	    }
+	    #BillCipher2{
+	    	width:450px;
+            height:450px;
+	    }
+	    #BillCipher3{
+	    	width:550px;
+            height:450px;
+        }
+        #PacificaNorthwest1{
+	    	width:400px;
+            height:450px;
+	    }
+	    #PacificaNorthwest2{
+	    	width:600px;
+            height:400px;
+	    }
+	    #PacificaNorthwest3{
+	    	width:650px;
+            height:450px;
+        }
+        #GideonGleeful1{
+	    	width:400px;
+            height:450px;
+	    }
+	    #GideonGleeful2{
+	    	width:500px;
+            height:400px;
+	    }
+	    #GideonGleeful3{
+	    	width:700px;
+            height:450px;
+        }
+        #Fiddleford“OldMan”McGucket1{
+	    	width:550px;
+            height:450px;
+	    }
+	    #Fiddleford“OldMan”McGucket2{
+	    	width:500px;
+            height:400px;
+	    }
+	    #Fiddleford“OldMan”McGucket3{
+	    	width:550px;
+            height:450px;
+        }
+        #CandyChiu1{
+	    	width:600px;
+            height:450px;
+	    }
+	    #CandyChiu2{
+	    	width:500px;
+            height:450px;
+	    }
+	    #CandyChiu3{
+	    	width:550px;
+            height:450px;
+        }
+        #Grenda1{
+	    	width:600px;
+            height:450px;
+	    }
+	    #Grenda2{
+	    	width:450px;
+            height:450px;
+	    }
+	    #Grenda3{
+	    	width:600px;
+            height:450px;
+        }
+        #RobbieValentino1{
+	    	width:600px;
+            height:450px;
+	    }
+	    #RobbieValentino2{
+	    	width:450px;
+            height:450px;
+	    }
+	    #RobbieValentino3{
+	    	width:600px;
+            height:450px;
+        }
+        #Waddles1{
+	    	width:550px;
+            height:450px;
+	    }
+	    #Waddles2{
+	    	width:600px;
+            height:450px;
+	    }
+	    #Waddles3{
+	    	width:450px;
+            height:450px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #263b2b;
+            color: white;
+            font-size: 14px;
+       }
+
+	</style>
+<body>
+	<nav class="nav">
+        <div class="bar"><a href="index.html">Home</a></div>
+        <div class="bar"><a href="character.html">Characters</a></div>
+        <div class="bar"><a href="stories.html">Stories</a></div>
+        
+        <div class=dropdown>
+            <div class="bar"><a href="location.html">Locations ▼</a></div>
+            <div class="dropdown-content">
+                <a href="shack.html">Mystery Shack</a>
+                <a href="tent.html">Tent of Telepathy</a>
+                <a href="forest.html">Forest</a>
+                <a href="lake.html">Gravity Falls Lake</a>
+                <a href="mansion.html">Northwest Mansion</a>
+            </div>
+        </div>
+
+    </nav>
+
+<div class="characters-content">
+
+    <center><h1>Meet the Characters</h1>
+
+    <p>
+        Quickly get to know the main characters.
+    </p></center>
+
+    <div class="character-guide">
+        <h2>Character Guide</h2>
+
+        <ul>
+            <li><a href="#dipper">Dipper Pines</a></li>
+            <li><a href="#mabel">Mabel Pines</a></li>
+            <li><a href="#stanley">Stanley “Grunkle Stan” Pines</a></li>
+            <li><a href="#stanford">Stanford “Ford” Pines</a></li>
+            <li><a href="#soos">Soos Ramirez</a></li>
+            <li><a href="#wendy">Wendy Corduroy</a></li>
+            <li><a href="#bill">Bill Cipher</a></li>
+            <li><a href="#pacifica">Pacifica Northwest</a></li>
+            <li><a href="#gideon">Gideon Gleeful</a></li>
+            <li><a href="#mcgucket">Fiddleford “Old Man” McGucket</a></li>
+            <li><a href="#candy">Candy Chiu</a></li>
+            <li><a href="#grenda">Grenda</a></li>
+            <li><a href="#robbie">Robbie Valentino</a></li>
+            <li><a href="#waddles">Waddles</a></li>
+        
+        </ul>
+    </div>
+
+
+
+    <div class="character-card" id="dipper">
+
+        <center><h2>Dipper Pines</h2>
+        <h3>The Mystery Solver</h3>
+
+        <img id=DipperPines1
+            src="dipper1.png"
+            alt="Dipper Pines"
+            
+        >
+        <img id=DipperPines2
+            src="dipper2.png"
+            alt="Dipper Pines"
+            
+        >
+        <img id=DipperPines3
+            src="dipper3.png"
+            alt="Dipper Pines"
+            
+        >
+
+        
+
+        <h2>Introduction</h2>
+        <p>
+            Dipper Pines is a curious and intelligent boy who spends the summer in Gravity Falls with his twin sister, Mabel. After discovering a mysterious journal, he becomes determined to investigate the town’s strange creatures and hidden secrets.
+        </p>
+
+        <h2>Role in the series</h2>
+
+        <p>
+            Dipper drives much of the mystery-solving in the series. His investigations connect different clues and uncover the town’s hidden history. Through these adventures, he learns to balance his desire for answers with trust, friendship, and family.
+        </p>
+
+        <h3>Key Traits</h3>
+
+        <ul>
+            <li>Curious</li>
+            <li>Analytical</li>
+            <li>Determined</li>
+        </ul></center>
+
+    </div>
+
+
+
+    <div class="character-card" id="mabel">
+
+        <center><h2>Mabel Pines</h2>
+        <h3>The Heart of the Adventure</h3>
+
+        <img id=MabelPines1
+            src="mabel1.png"
+            alt="Mabel Pines"
+            
+        >
+        <img id=MabelPines2
+            src="mabel2.png"
+            alt="Mabel Pines"
+            
+        >
+        <img id=MabelPines3
+            src="mabel3.png"
+            alt="Mabel Pines"
+            
+        >
+        
+            
+
+        <h2>Introduction</h2>
+        <p>
+            Mabel Pines is Dipper’s energetic and imaginative twin sister. She loves colourful sweaters, creative projects, and making friends. Her cheerful personality brings excitement and humour to their summer adventures.
+        </p>
+
+        <h2>Role in the series</h2>
+
+        <p>
+            Mabel brings emotional warmth to the story and often finds solutions through creativity and kindness. Her fear of change also makes growing up an important theme. Her relationship with Dipper keeps the series centred on family.
+        </p>
+        <h3>Key Traits</h3>
+
+        <ul>
+            <li>Creative</li>
+            <li>Outgoing</li>
+            <li>Optimistic</li>
+        </ul>
+        </center>
+        
+
+    </div>
+
+
+    <div class="character-card" id="stanley">
+
+        <center><h2>Stanley “Grunkle Stan” Pines</h2>
+        <h3>The Secretive Protector</h3>
+
+        <img id=Stanley“GrunkleStan”Pines1
+            src="stanley1.png"
+            alt="Stanley “Grunkle Stan” Pines"
+            
+        >
+        <img id=Stanley“GrunkleStan”Pines2
+            src="stanley2.png"
+            alt="Stanley “Grunkle Stan” Pines"
+            
+        >
+        <img id=Stanley“GrunkleStan”Pines3
+            src="stanley3.png"
+            alt="Stanley “Grunkle Stan” Pines"
+            
+        >
+
+        <h2>Introduction</h2>
+        <p>
+            Grunkle Stan runs the Mystery Shack, a tourist attraction filled with strange exhibits. He often appears greedy, grumpy, and dishonest, but beneath his rough personality, he deeply cares about Dipper and Mabel.
+        </p>
+
+        <h2>Role in the series</h2>
+
+        <p>
+            Stan provides comedy while hiding secrets that are central to the main mystery. His actions gradually reveal his loyalty to his family. He shows that someone who seems selfish can still be capable of great love and sacrifice.
+        </p>
+        <h3>Key Traits</h3>
+
+        <ul>
+            <li>Cunning</li>
+            <li>Secretive</li>
+            <li>Protective</li>
+        </ul>
+        </center>
+
+    </div>
+
+
+    <div class="character-card" id="stanford">
+
+        <center><h2>Stanford “Ford” Pines</h2>
+        <h3>The Author of the Journals</h3>
+
+        <img id=Stanford“Ford”Pines1
+            src="stanford1.png"
+            alt="Stanford “Ford” Pines"
+            
+        >
+        <img id=Stanford“Ford”Pines2
+            src="stanford2.png"
+            alt="Stanford “Ford” Pines"
+            
+        >
+        <img id=Stanford“Ford”Pines3
+            src="stanford3.png"
+            alt="Stanford “Ford” Pines"
+            
+        >
+
+        <h2>Introduction</h2>
+        <p>
+            Ford Pines is Stan’s twin brother and a scientist who studies supernatural phenomena. He wrote the mysterious journals that record the secrets of Gravity Falls. His intelligence and curiosity lead him into dangerous discoveries.
+        </p>
+
+        <h2>Role in the series</h2>
+
+        <p>
+            Ford connects the journals, the portal, and the town’s supernatural history. He becomes a mentor to Dipper, but his mistakes also reveal the dangers of pride and misplaced trust. His relationship with Stan adds depth to the family story.
+        </p>
+        <h3>Key Traits</h3>
+
+        <ul>
+            <li>Intelligent</li>
+            <li>Inquisitive</li>
+            <li>Proud</li>
+        </ul>
+        </center>
+
+    </div>
+
+
+    <div class="character-card" id="soos">
+
+        <center><h2>Soos Ramirez</h2>
+        <h3>The Loyal Helper</h3>
+
+        <img id=SoosRamirez1
+            src="soos.png"
+            alt="Soos Ramirez"
+            
+        >
+        <img id=SoosRamirez2
+            src="soos2.png"
+            alt="Soos Ramirez"
+            
+        >
+        <img id=SoosRamirez3
+            src="soos3.png"
+            alt="Soos Ramirez"
+            
+        >
+
+        <h2>Introduction</h2>
+        <p>
+            Soos is the friendly handyman at the Mystery Shack. He enjoys games, repairing things, and spending time with Dipper and Mabel. Although he sometimes acts silly, he is dependable and skilled with machines.
+        </p>
+
+        <h2>Role in the series</h2>
+
+        <p>
+            Soos supports the group with practical skills and unwavering loyalty. He brings humour while making the Mystery Shack feel like a home. His bond with Stan also explores the idea that family can be built through care rather than blood.
+        </p>
+        <h3>Key Traits</h3>
+
+        <ul>
+            <li>Loyal</li>
+            <li>Kind-hearted</li>
+            <li>Helpful</li>
+        </ul>
+        </center>
+
+    </div>
+
+
+    <div class="character-card" id="wendy">
+
+        <center><h2>Wendy Corduroy</h2>
+        <h3>The Cool Adventurer</h3>
+
+        <img id=WendyCorduroy1
+            src="wendy.png"
+            alt="Wendy Corduroy"
+            
+        >
+        <img id=WendyCorduroy2
+            src="wendy2.png"
+            alt="Wendy Corduroy"
+            
+        >
+        <img id=WendyCorduroy3
+            src="wendy3.png"
+            alt="Wendy Corduroy"
+            
+        >
+
+        <h2>Introduction</h2>
+        <p>
+            Wendy is a laid-back teenager who works part-time at the Mystery Shack. She is confident, adventurous, and usually stays calm in dangerous situations. Dipper admires her and develops a crush on her.
+        </p>
+
+        <h2>Role in the series</h2>
+
+        <p>
+            Wendy is both a capable teammate and an important part of Dipper’s personal growth. Their relationship helps him understand that friendship remains valuable even when romantic feelings are not returned.
+        </p>
+        <h3>Key Traits</h3>
+
+        <ul>
+            <li>Laid-back</li>
+            <li>Brave</li>
+            <li>Confident</li>
+        </ul>
+        </center>
+
+    </div>
+
+
+    <div class="character-card" id="bill">
+
+        <center><h2>Bill Cipher</h2>
+        <h3>The Master of Chaos</h3>
+
+        <img id=BillCipher1
+            src="bill.png"
+            alt="Bill Cipher"
+            
+        >
+        <img id=BillCipher2
+            src="bill2.png"
+            alt="Bill Cipher"
+            
+        >
+        <img id=BillCipher3
+            src="bill3.png"
+            alt="Bill Cipher"
+            
+        >
+
+        <h2>Introduction</h2>
+        <p>
+            Bill Cipher is a powerful, one-eyed demon from another dimension. He appears as a yellow triangle and often behaves like a playful entertainer. Behind his jokes, however, he is manipulative, cruel, and dangerous.
+        </p>
+
+        <h2>Role in the series</h2>
+
+        <p>
+            Bill is the main supernatural antagonist. His schemes connect the town’s mysteries to a much greater threat. He tests the characters’ trust and unity, showing how ambition and tempting promises can be used to manipulate people.
+        </p>
+        <h3>Key Traits</h3>
+
+        <ul>
+            <li>Manipulative</li>
+            <li>Deceptive</li>
+            <li>Cruel</li>
+        </ul>
+        </center>
+
+    </div>
+
+    <div class="character-card" id="pacifica">
+
+        <center><h2>Pacifica Northwest</h2>
+        <h3>More Than a Rich Girl</h3>
+
+        <img id=PacificaNorthwest1
+            src="pacifica.png"
+            alt="Pacifica Northwest"
+            
+        >
+        <img id=PacificaNorthwest2
+            src="pacifica2.png"
+            alt="Pacifica Northwest"
+            
+        >
+        <img id=PacificaNorthwest3
+            src="pacifica3.png"
+            alt="Pacifica Northwest"
+            
+        >
+
+        <h2>Introduction</h2>
+        <p>
+            Pacifica Northwest comes from a wealthy and influential family. At first, she looks down on Mabel and other people in town. Later, the series reveals the pressure she faces from her controlling parents.
+        </p>
+
+        <h2>Role in the series</h2>
+
+        <p>
+            Pacifica begins as Mabel’s rival but develops into a more sympathetic character. Her story explores privilege, family expectations, and personal choice. She shows that people can challenge the values they were raised with.
+        </p>
+        <h3>Key Traits</h3>
+
+        <ul>
+            <li>Proud</li>
+            <li>Insecure</li>
+            <li>Strong-willed</li>
+        </ul>
+        </center>
+
+    </div>
+
+
+    <div class="character-card" id="gideon">
+
+        <center><h2>Gideon Gleeful</h2>
+        <h3>The False Psychic</h3>
+
+        <img id=GideonGleeful1
+            src="gideon.png"
+            alt="Gideon Gleeful"
+            
+        >
+        <img id=GideonGleeful2
+            src="gideon2.png"
+            alt="Gideon Gleeful"
+            
+        >
+        <img id=GideonGleeful3
+            src="gideon3.png"
+            alt="Gideon Gleeful"
+            
+        >
+
+        <h2>Introduction</h2>
+        <p>
+            Gideon Gleeful is a young performer who claims to have psychic powers. Although he presents himself as sweet and charming, he is controlling and obsessed with gaining power. He also develops an unwanted romantic interest in Mabel.
+        </p>
+
+        <h2>Role in the series</h2>
+
+        <p>
+            Gideon is a major early antagonist who threatens the Pines family and tries to take the Mystery Shack. His involvement with the journals and Bill links his personal rivalry to the larger supernatural story.
+        </p>
+        <h3>Key Traits</h3>
+
+        <ul>
+            <li>Controlling</li>
+            <li>Power-hungry</li>
+            <li>Deceptive</li>
+        </ul>
+        </center>
+
+    </div>
+
+
+    <div class="character-card" id="mcgucket">
+
+        <center><h2>Fiddleford “Old Man” McGucket</h2>
+        <h3>The Forgotten Genius</h3>
+
+        <img id=Fiddleford“OldMan”McGucket1
+            src="old.png"
+            alt="Fiddleford “Old Man” McGucket"
+            
+        >
+        <img id=Fiddleford“OldMan”McGucket1
+            src="old2.png"
+            alt="Fiddleford “Old Man” McGucket"
+            
+        >
+        <img id=Fiddleford“OldMan”McGucket1
+            src="old3.png"
+            alt="Fiddleford “Old Man” McGucket"
+            
+        >
+
+        <h2>Introduction</h2>
+        <p>
+            Old Man McGucket initially appears to be an eccentric man living at the junkyard. However, he was once a brilliant inventor who worked with Ford. Repeatedly erasing his own memories caused him to lose much of his former identity.
+        </p>
+
+        <h2>Role in the series</h2>
+
+        <p>
+            McGucket helps reveal the history behind the portal and the town’s forgotten secrets. His story shows the cost of trying to escape painful memories. His engineering skills also become important when the town faces danger.
+        </p>
+        <h3>Key Traits</h3>
+
+        <ul>
+            <li>Inventive</li>
+            <li>Eccentric</li>
+            <li>Resourceful</li>
+        </ul>
+        </center>
+
+    </div>
+
+
+    <div class="character-card" id="candy">
+
+        <center><h2>Candy Chiu</h2>
+        <h3>The Thoughtful Friend</h3>
+
+        <img id=CandyChiu1
+            src="candy.png"
+            alt="Candy Chiu"
+            
+        >
+        <img id=CandyChiu2
+            src="candy2.png"
+            alt="Candy Chiu"
+            
+        >
+        <img id=CandyChiu3
+            src="candy3.png"
+            alt="Candy Chiu"
+            
+        >
+
+        <h2>Introduction</h2>
+        <p>
+            Candy is one of Mabel’s closest friends in Gravity Falls. She wears glasses and often approaches situations with thoughtful observations and unusual ideas. She enjoys spending time with Mabel and Grenda.
+        </p>
+
+        <h2>Role in the series</h2>
+
+        <p>
+            Candy helps develop Mabel’s life beyond her relationship with Dipper. Their friendship brings humour and companionship to the series, showing the importance of finding people who appreciate your individuality.
+        </p>
+        <h3>Key Traits</h3>
+
+        <ul>
+            <li>Thoughtful</li>
+            <li>Intelligent</li>
+            <li>Supportive</li>
+        </ul>
+        </center>
+
+    </div>
+
+
+    <div class="character-card" id="grenda">
+
+        <center><h2>Grenda</h2>
+        <h3>The Fearless Friend</h3>
+
+        <img id=Grenda1
+            src="grenda.png"
+            alt="Grenda"
+            
+        >
+        <img id=Grenda2
+            src="grenda2.png"
+            alt="Grenda"
+            
+        >
+        <img id=Grenda3
+            src="grenda3.png"
+            alt="Grenda"
+            
+        >
+
+        <h2>Introduction</h2>
+        <p>
+            Grenda is Mabel and Candy’s strong, outspoken friend. She has a deep voice and an enthusiastic personality. She expresses her feelings openly and stands up for the people she cares about.
+        </p>
+
+        <h2>Role in the series</h2>
+
+        <p>
+            MGrenda brings energetic comedy and loyalty to Mabel’s friendship group. Her confidence challenges narrow expectations about how girls should behave, while her friendships celebrate acceptance and being yourself.
+        </p>
+        <h3>Key Traits</h3>
+
+        <ul>
+            <li>Outspoken</li>
+            <li>Confident</li>
+            <li>Loyal</li>
+        </ul>
+        </center>
+
+    </div>
+
+
+    <div class="character-card" id="robbie">
+
+        <center><h2>Robbie Valentino</h2>
+        <h3>The Troubled Teenager</h3>
+
+        <img id=RobbieValentino1
+            src="robbie.png"
+            alt="Robbie Valentino"
+            
+        >
+        <img id=RobbieValentino2
+            src="robbie2.png"
+            alt="Robbie Valentino"
+            
+        >
+        <img id=RobbieValentino3
+            src="robbie3.png"
+            alt="Robbie Valentino"
+            
+        >
+
+        <h2>Introduction</h2>
+        <p>
+            Robbie is a moody teenager who enjoys music and spends time with Wendy’s friend group. He dates Wendy for part of the series, which creates tension between him and Dipper.
+        </p>
+
+        <h2>Role in the series</h2>
+
+        <p>
+            Robbie mainly contributes to the teenage relationship storylines. He creates conflict around Dipper’s crush on Wendy, while his own insecurities show that an unfriendly appearance can hide emotional vulnerability.
+        </p>
+        <h3>Key Traits</h3>
+
+        <ul>
+            <li>Moody</li>
+            <li>Insecure</li>
+            <li>Sarcastic</li>
+        </ul>
+        </center>
+
+    </div>
+
+
+    <div class="character-card" id="waddle">
+
+        <center><h2>Waddles</h2>
+        <h3>Mabel’s Beloved Pig</h3>
+
+        <img id=Waddles1
+            src="pig.png"
+            alt="Waddles"
+            
+        >
+        <img id=Waddles2
+            src="pig2.png"
+            alt="Waddles"
+            
+        >
+        <img id=Waddles3
+            src="pig3.png"
+            alt="Waddles"
+            
+        >
+
+        <h2>Introduction</h2>
+        <p>
+            Waddles is Mabel’s pet pig, whom she wins at the town fair. He becomes her beloved companion and is often included in her everyday activities.
+        </p>
+
+        <h2>Role in the series</h2>
+
+        <p>
+            Waddles adds gentle humour and highlights Mabel’s caring personality. Although he is not a mystery solver, his bond with Mabel gives several adventures personal stakes and emotional warmth.
+        </p>
+        <h3>Key Traits</h3>
+
+        <ul>
+            <li>Affectionate</li>
+            <li>Playful</li>
+            <li>Easygoing</li>
+        </ul>
+        </center>
+
+    </div>
+
+	<footer>
+  <p>© 2026 Gravity Falls Fan Website | Created for ICS3U</p>
+</footer>
+
+
+</body>
+</html>

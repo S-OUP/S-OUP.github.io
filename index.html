@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+	<style>
+		*{
+			font-family: Roboto Slab;
+			box-sizing: border-box;
+		}
+		
+		
+		.bar{
+			background-color: rgb(160, 195, 35 );
+			padding: 20px 30px;
+			transition: 0.3s;
+            display: inline-block;
+		}
+		.bar:hover{
+			background-color: rgb(200, 120, 75 );
+			padding: 20px 30px;
+			transition: 0.3s;
+            display: inline-block;
+            border-radius: 10px;
+		}
+		.nav{
+			position: sticky;
+			top: 0;
+            background-color: rgb(160, 195, 35 );
+            padding: 0px 20px;
+            width: 100%;
+            border-bottom: 1px solid black;
+            justify-content: space-evenly;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+		.nav a{
+			font-size: 18px;
+			text-decoration: none;
+			color:darkslategray;
+		}
+			
+		body{
+			background-image: 
+			url(https://images.squarespace-cdn.com/content/v1/510f1edee4b0e3b888bd8707/1546668105333-QUFGRCH6BQW1C0J3J1M5/GF_17.jpg?format=1500w);
+			background-size: 100%;
+			margin: 0;
+			background-repeat: no-repeat;
+
+		}
+		.dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 166px;
+            background-color: rgb(160, 195, 35 );
+            z-index: 1000;
+        }
+
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            border-top: 1px solid black;
+        }
+
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 15px;
+            font-size: 15px;
+            border-bottom: 1px solid black;
+        }
+
+
+        .dropdown-content a:hover {
+            background-color:rgb(200, 120, 75 );
+            
+        }
+		#Introduction{
+			margin-left: 300px;
+			margin-right: 300px;
+			color: rgb(200, 215, 175 );
+			text-shadow: 3px 3px 3px black;
+			margin-top: -50px;
+			font-size: 30px;
+		}
+		#title{
+			font-size: 150px;
+			text-align: center;
+			color: rgb(200, 215, 175 );
+			text-shadow: 5px 5px 5px black;
+		}
+		.row{
+			text-align: center;
+			margin-top: 460px;
+		}
+		
+        
+        
+       
+       .title2{
+       	    font-size: 35px;
+            text-align: center;
+       }
+       
+            
+       
+       .video {
+           text-align: center;
+           padding-top: 50px;
+           padding-bottom: 120px;
+           background-color: lightgray;
+           
+           width: 100%;
+       }
+
+       .video iframe {
+           width: 535px;
+           height: 310px;
+           border: none;
+           border: 10px solid rgb(200, 120, 75 );
+           border-radius: 20px;
+           box-shadow: 0px 0px 10px 0px black;
+       }
+       .poster-container{
+           display: flex;
+           justify-content: center;
+           gap: 25px;
+           margin-top: 100px;
+       }
+       .poster{
+       	   width: 30%;
+           
+           
+           
+           
+       }
+       .poster img{
+       	    width: 50%;
+            height: 70%;
+            margin: 0 auto;
+            display: block;
+            border-radius:20px;
+            box-shadow: 5px 5px 5px black;
+       }
+       .poster h3{
+       	    display: block;
+            font-size: 25px;
+            color: black;
+            padding: 12px;
+            margin: 30px auto;
+            text-decoration: none;
+       }
+       .actor{
+       	    margin: 100px 500px;
+       }
+       .species{
+       	    width: 90%;
+       	    margin: 100px auto;
+       	    text-align: center;
+       }
+       .card-container{
+       	    display: flex;
+       	    justify-content: center;
+       	    gap: 25px;
+       }
+       .card{
+       	    width: 25%;
+       	    height: 520px;
+       	    border-radius: 20px;
+       	    overflow: hidden;
+       	    box-shadow: 0 0 10px 5px gray;
+       }
+       .card img{
+       	    width: 80%;
+       	    height: 40%;
+       	    object-fit: cover;
+       	    margin: 40px auto;
+       	    display: block;
+       	    border-radius: 20px;
+       }
+       .card a{
+       	    display: block;
+       	    background-color: rgb(200, 120, 75 );
+       	    color: lightgray;
+       	    padding: 12px;
+       	    margin: 0 120px;
+       	    text-decoration: none;
+       	    border-radius: 10px;
+       	    margin-top: 50px;
+       }
+       .card a:hover{
+       	    display: block;
+       	    background-color: rgb(160, 195, 35 );
+       	    color: white;
+       	    padding: 12px;
+       	    margin: 0 120px;
+       	    text-decoration: none;
+       	    border-radius: 10px;
+       	    margin-top: 50px;
+       }
+       .card h1{
+       	    font-size: 30px;
+       	    margin-top: 50px;
+       }
+       .card p{
+       	    font-size: 20px;
+       	    margin-top: 20px;
+       	    margin-bottom: 50px;
+       }
+       footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #263b2b;
+            color: white;
+            font-size: 14px;
+       }
+	</style>
+<body>
+	
+	<nav class="nav">
+		<div class="bar"><a href="index.html">Home</a></div>
+		<div class="bar"><a href="character.html">Characters</a></div>
+		<div class="bar"><a href="stories.html">Stories</a></div>
+		
+		<div class=dropdown>
+		    <div class="bar"><a href="location.html">Locations ▼</a></div>
+		    <div class="dropdown-content">
+		    	<a href="shack.html">Mystery Shack</a>
+		    	<a href="tent.html">Tent of Telepathy</a>
+		    	<a href="forest.html">Forest</a>
+		    	<a href="lake.html">Gravity Falls Lake</a>
+		    	<a href="mansion.html">Northwest Mansion</a>
+		    </div>
+        </div>
+
+	</nav>
+	
+<h2 id=title>Gravity Falls</h2>
+
+<p id=Introduction>The series follows the adventures of Dipper Pines and his twin sister Mabel, who are sent to spend the summer with their great-uncle Stan in Gravity Falls. Oregon, a mysterious town rife with paranormal incidents and supernatural creatures. The kids help Stan run the "Mystery Shack", the tourist trap that he owns, while also investigating the local mysteries.</p>
+
+
+<div class="row">
+	<h4 class=title2>The series premiered on June 15, 2012, and ran for two seasons until February 15, 2016</h4>
+    <div class="poster-container">
+    
+    <div class="poster">
+        <img src="season1-poster.png">
+        <h3>Season1</h3>
+    </div>
+    
+    <div class="poster">
+        <img src="season2_poster.png">
+        <h3>Season2</h3>
+    </div>
+
+    </div>
+</div>
+
+
+
+<div class=video>
+	<h4 class="title2">Gravity Falls — Opening Sequence</h4>
+	<iframe
+        src="opening animation.mp4"
+        title="Gravity Falls Trailer"
+        allowfullscreen>
+    </iframe>
+</div>
+
+<div class="actor">
+	<h4 class="title2">Voice Cast</h4>
+	<table border="1" style="border-collapse: collapse; width: 100%;">
+  <tr>
+    <th>Characters</th>
+    <th>Voice Actors</th>
+  </tr>
+  <tr>
+    <td>Dipper Pines</td>
+    <td>Jason Ritter</td>
+  </tr>
+  <tr>
+   <tr>
+    <td>Mabel Pines</td>
+    <td>Kristen Schaal</td>
+  </tr>	
+    <td>Stanley Pines</td>
+    <td rowspan="3">Alex Hirsch</td>
+    
+  </tr>
+  <tr>
+    <td>Bill Cipher</td>
+  </tr>
+  <tr>
+    <td>Soos</td>
+  </tr>
+  <tr>
+    <td>Wendy Corduroy</td>
+    <td>Linda Cardellini</td>
+  </tr>
+  <tr>
+    <td>Stanford Pines</td>
+    <td>J. K. Simmons</td>
+  </tr>
+</table>
+</div><hr>
+
+<div class=species>
+	<h4 class="title2">You can also discover...</h4>
+	
+	<div class="card-container">
+		
+		<div class="card">
+			<img src="character.png">
+			<h1>Character</h1>
+			<p>Meet the characters and learn about their personalities.</p>
+            <a href="character.html">Explore</a>
+		</div>
+		
+		<div class="card">
+			<img src="stories.png">
+			<h1>Stories</h1>
+			<p>Discover the strange and funny adventures in Gravity Falls.</p>
+            <a href="stories.html">Explore</a>
+		</div>
+		
+		<div class="card">
+			<img src="location.png">
+			<h1>Location</h1>
+			<p>Explore all kinds of mysterious places in Gravity Falls.</p>
+            <a href="location.html">Explore</a>
+		</div>
+
+	</div>
+</div>
+
+<footer>
+  <p>© 2026 Gravity Falls Fan Website | Created for ICS3U</p>
+</footer>
+
+</body>
+</html>

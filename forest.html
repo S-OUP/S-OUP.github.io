@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+	<style>
+		*{
+			font-family: Roboto Slab;
+			box-sizing: border-box;
+		}
+		body{
+			margin: 0;
+			background-color: rgb(200, 240, 190);
+		}
+		.bar{
+			background-color: rgb(160, 195, 35 );
+			padding: 20px 30px;
+			transition: 0.3s;
+            display: inline-block;
+		}
+		.bar:hover{
+			background-color: rgb(200, 120, 75 );
+			padding: 20px 30px;
+			transition: 0.3s;
+            display: inline-block;
+            border-radius: 10px;
+		}
+		.nav{
+			position: sticky;
+			top: 0;
+            background-color: rgb(160, 195, 35 );
+            padding: 0px 20px;
+            width: 100%;
+            border-bottom: 1px solid black;
+            justify-content: space-evenly;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+		.nav a{
+			font-size: 18px;
+			text-decoration: none;
+			color:darkslategray;
+		}
+		.dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 166px;
+            background-color: rgb(160, 195, 35 );
+            z-index: 1000;
+        }
+
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            border-top: 1px solid black;
+        }
+
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 15px;
+            font-size: 15px;
+            border-bottom: 1px solid black;
+        }
+
+
+        .dropdown-content a:hover {
+            background-color:rgb(200, 120, 75 );
+            
+        }
+        .container {
+    width: 70%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.container img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px black;
+}
+
+.container h1 {
+    font-size: 40px;
+    margin: 25px 0;
+}
+
+.container p {
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: left;
+}
+ footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #263b2b;
+            color: white;
+            font-size: 14px;
+       }
+    </style>	
+    <body>
+	
+	
+	<nav class="nav">
+		<div class="bar"><a href="index.html">Home</a></div>
+		<div class="bar"><a href="character.html">Characters</a></div>
+		<div class="bar"><a href="stories.html">Stories</a></div>
+		
+		<div class=dropdown>
+		    <div class="bar"><a href="location.html">Locations ▼</a></div>
+		    <div class="dropdown-content">
+		    	<a href="shack.html">Mystery Shack</a>
+		    	<a href="tent.html">Tent of Telepathy</a>
+		    	<a href="forest.html">Forest</a>
+		    	<a href="lake.html">Gravity Falls Lake</a>
+		    	<a href="mansion.html">Northwest Mansion</a>
+		    </div>
+        </div>
+
+	</nav>
+
+    <div class="container">
+        <img src="forest.png" alt="Picture">
+
+        <h1>The Forest</h1>
+
+        <p>
+            The forest surrounding Gravity Falls is full of mysterious creatures, strange events, and hidden secrets. Such as gnomes that can combine to form a giant creature and strange beings that are half-human and half-bull. Dipper and Mabel often explore the woods and encounter supernatural mysteries. It is one of the most mysterious places in the town.
+        </p>
+    </div>
+
+    <footer>
+  <p>© 2026 Gravity Falls Fan Website | Created for ICS3U</p>
+</footer>
+
+	</body>		
+</head>
+</html>

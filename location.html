@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+	<style>
+		*{
+			font-family: Roboto Slab;
+			box-sizing: border-box;
+		}
+		
+		
+		.bar{
+			background-color: rgb(160, 195, 35 );
+			padding: 20px 30px;
+			transition: 0.3s;
+            display: inline-block;
+		}
+		.bar:hover{
+			background-color: rgb(200, 120, 75 );
+			padding: 20px 30px;
+			transition: 0.3s;
+            display: inline-block;
+            border-radius: 10px;
+		}
+		.nav{
+			position: sticky;
+			top: 0;
+            background-color: rgb(160, 195, 35 );
+            padding: 0px 20px;
+            width: 100%;
+            border-bottom: 1px solid black;
+            justify-content: space-evenly;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+		.nav a{
+			font-size: 18px;
+			text-decoration: none;
+			color:darkslategray;
+		}
+		.dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 166px;
+            background-color: rgb(160, 195, 35 );
+            z-index: 1000;
+        }
+
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            border-top: 1px solid black;
+        }
+
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 15px;
+            font-size: 15px;
+            border-bottom: 1px solid black;
+        }
+
+
+        .dropdown-content a:hover {
+            background-color:rgb(200, 120, 75 );
+            
+        }
+		body{
+			
+			margin: 0;
+
+		}
+
+		.row {
+            position: relative;
+            height: 300px;
+        }
+
+        .row a {
+            position: absolute;
+            font-size: 25px;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            padding: 10px 20px;
+}
+.map{
+	background-image: url(map.png);
+			background-size: 100%;
+			height: 1400px;
+			background-repeat: no-repeat;
+}
+.word1 {
+    left: 500px;
+    top: 480px;
+}
+
+.word2 {
+    left: 1300px;
+    top: 700px;
+}
+
+.word3 {
+    left: 1050px;
+    top: 1100px;
+}
+
+.word4 {
+    left: 830px;
+    top: 480px;
+}
+.word5{
+	left: 200px;
+    top: 700px;
+}
+.row a:hover{
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+	text-decoration: none;
+	background: rgba(155, 155, 155, 0.5);
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+.row img{
+	width: 22%;
+	height: 80%;
+	position: absolute;
+	border-radius: 20px;
+}
+	.img1{
+		left: 400px;
+    top: 180px;
+    opacity: 0;
+     transition: opacity 0.5s;
+	}
+	.img2{
+		left: 100px;
+    top: 800px;
+    opacity: 0;
+    transition: opacity 0.5s;
+	}
+	.img3{
+		left: 1200px;
+    top: 800px;
+    opacity: 0;
+    transition: opacity 0.5s;
+	}
+	.img4{
+		left: 650px;
+    top: 1000px;
+    opacity: 0;
+    transition: opacity 0.5s;
+	}
+	.img5{
+		left: 900px;
+    top: 180px;
+    opacity: 0;
+    transition: opacity 0.5s;
+	}
+	.word1:hover ~.img1{
+		opacity: 1;
+	}
+	.word2:hover ~.img3{
+		opacity: 1;
+	}
+	.word3:hover ~.img4{
+		opacity: 1;
+	}
+	.word4:hover ~.img5{
+		opacity: 1;
+	}
+	.word5:hover ~.img2{
+		opacity: 1;
+	}
+	footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #263b2b;
+            color: white;
+            font-size: 14px;
+       }
+	</style>
+
+<body>
+	<nav class="nav">
+		<div class="bar"><a href="index.html">Home</a></div>
+		<div class="bar"><a href="character.html">Characters</a></div>
+		<div class="bar"><a href="stories.html">Stories</a></div>
+		
+		<div class=dropdown>
+		    <div class="bar"><a href="location.html">Locations ▼</a></div>
+		    <div class="dropdown-content">
+		    	<a href="shack.html">Mystery Shack</a>
+		    	<a href="tent.html">Tent of Telepathy</a>
+		    	<a href="forest.html">Forest</a>
+		    	<a href="lake.html">Gravity Falls Lake</a>
+		    	<a href="mansion.html">Northwest Mansion</a>
+		    </div>
+        </div>
+
+	</nav>
+	
+    <div class="map">
+        
+        
+
+   
+        <div class="row">
+            <a href="shack.html" class="word1">The Mystery Shack</a>
+            <a href="lake.html" class="word2">Gravity Falls Lake</a>
+            <a href="mansion.html" class="word3">Northwest Mansion</a>
+            <a href="tent.html" class="word4">Tent of Telepathy</a>
+            <a href="forest.html" class="word5">The Forest</a>
+            <img src="mystery_shack.png" class="img1">
+            <img src="forest.png" class="img2">
+            <img src="lake.png" class="img3">
+            <img src="Northwest_Manor.png" class="img4">
+            <img src="tent.png" class="img5">
+        </div>
+
+    </div>
+
+    <footer>
+  <p>© 2026 Gravity Falls Fan Website | Created for ICS3U</p>
+</footer>
+
+</body>
+</html>
